@@ -1,0 +1,91 @@
+body{
+  background: black;
+  /*background: #e6e6e6;*/
+}
+
+.banner-image
+{
+  background-image: url('../../img/Desert.jpg');
+  background-size: cover;
+}
+.details-content {
+    margin-top: 50px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 15%);
+    padding: 20px 20px;
+    border-radius: 6px;
+    margin-bottom: 50px;
+}
+
+.section-padding-20 {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.display-content{
+    border: groove;
+    display : block;
+    overflow : hidden;
+    width: 100%;
+    height: 500px;
+    /* Center child horizontally*/
+    display: flex;
+    justify-content: center;
+    /*background: black;*/
+}
+.frame-content{
+  margin: 10px;
+  width: 100%;
+
+}
+/*.loginButton{
+  background: black;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 1000px;
+  height: 50px;
+  background: #0099cc;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+}
+.loginButton span{
+  color: white;
+}*/
+
+/*.loginButton::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a1400;
+  transform: scaleX(0);
+  transition: 0.5s ease-in-out;
+  transform-origin: right;
+
+}
+
+.loginButton:hover::before{
+  
+  transform: scaleX(1);
+  transform-origin: left;
+}*/
