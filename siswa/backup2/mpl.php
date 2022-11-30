@@ -33,7 +33,17 @@
                             <tr class="gradeX">
                               <td>1</td>
                               <td>Senin</td>
-                              
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
 
                             </tr>
                             <tr class="gradeX">

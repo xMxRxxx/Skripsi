@@ -2,6 +2,9 @@
  include '../db/koneksi.php';
  include 'akses.php';
  include '../layout/header.php';
+
+
+
  ?>
 
 <div id="content" style="margin-top:60px;">
@@ -10,7 +13,9 @@
         <div class="row justify-content-center">
           <div class="col-12">
             <div class="details-content">
-              <h2 id="xs"><i class="icon-calendar"></i> GURU </h2>
+
+              <h2><i class="icon-calendar"></i> GURU </h2>
+
               <div id="myDiv" class="container-fluid">
                 <hr>
                 <div class="row-fluid">
@@ -27,7 +32,6 @@
                               <th>Nama</th>
                               <th>Jenis Kelamin</th>
                               <th>Tgl Lahir</th>
-                              <th>Alamat</th>
                               <th>Status</th>
                               <th>Jabatan</th>
                               <th>Telepon</th>
@@ -36,26 +40,100 @@
                           </tr>
                           </thead>
                           <tbody>
-                            <?php 
-                             $query_tampilList = mysqli_query($konek, "SELECT * FROM biodata_guru ORDER BY id_guru");
-                             $no =1;
-                             while($dataList = mysqli_fetch_array($query_tampilList)){
-                             ?>
+                            <!-- 
                             <tr class="gradeX">
-                              <td><?php echo $no; ?></td>
-                              <td><?php echo $dataList['nip']; ?></td>
-                              <td><?php echo $dataList['nuptk']; ?></td>
-                              <td><?php echo $dataList['nama']; ?></td>
-                              <td><?php echo $dataList['jenis_kelamin']; ?></td>
-                              <td><?php echo $dataList['tgl_lahir']; ?></td>
-                              <td><?php echo $dataList['alamat']; ?></td>
-                              <td><?php echo $dataList['status']; ?></td>
-                              <td><?php echo $dataList['jabatan']; ?></td>
-                              <td><?php echo $dataList['telepon']; ?></td>
+                              <td>1</td>
+                              <td>Senin</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
 
                             </tr>
-                            <?php $no++;} ?>
-                            
+                            <tr class="gradeX">
+                              <td>2</td>
+                              <td>Selasa</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                            </tr>
+                            <tr class="gradeX">
+                              <td>3</td>
+                              <td>Rabu</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                            </tr>
+                            <tr class="gradeX">
+                              <td>4</td>
+                              <td>Kamis</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                            </tr>
+                            <tr class="gradeX">
+                              <td>5</td>
+                              <td>Jum'at</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                            </tr>
+                            <tr class="gradeX">
+                              <td>6</td>
+                              <td>Sabtu</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                              <td>MTK</td>
+                            </tr>
+                             -->
+                           
                           </tbody>
                         </table>
                         <!-- A button to open the popup form -->
@@ -78,6 +156,16 @@
                 <form action="proses.php?kategori=guru" method="post" class="form-container" style="margin:10px" autocomplete="false">
                   <h1>Tambahkan guru</h1>
 
+                  <!-- <div class="inputBox">
+                      <input type="text" name="username" required="required"/>
+                      <span>Username</span>
+                       <i></i>
+                  </div>
+                  <div class="inputBox">
+                      <input type="password" name="password" required="required"/>
+                      <span>Password</span>
+                      <i></i>
+                  </div> -->
                   
                   <div class="row mb-3">
                           <label class="col-sm-2 col-form-label">Nip</label>
@@ -170,34 +258,8 @@
                           <div class="col-sm-10 offset-sm-2">
                             <input type="batal" value="Batal" name="batal" onclick="closeForm()" style="width:25%; background: #ff3333;" />
                             <input type="submit" value="Simpan" name="simpan"style="width:25%;" />
-                              <!-- <button class="" type="submit" class="btn btn-primary">Simpan</button> -->
                           </div>
-                          <!-- <div class="col-sm-10 offset-sm-2"> -->
-                            
-                              <!-- <button type="button" class="btn cancel" onclick="closeForm()">Batal</button> -->
-                          <!-- </div> -->
                       </div>
-                  
-    
-
-                  <!-- <div class="container">
-                    <div class="row row-cols-3">
-                      <div class="col-4 col-lg-2" style="margin: 10px;top: 10px;"><span><b>Password</b></span></div>
-                      <div class="col-4 col-lg-2">: <input type="password" placeholder="Enter Password" name="psw" required></div>
-                      <input class="col" type="password" placeholder="Enter Password" name="psw" required>
-                      
-                    </div>
-                  </div>
-                    
-                  
-                  <label for="email"><b>Email</b></label>
-                  
-
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required> -->
-
-                  <!-- <button type="submit" class="btn">Login</button>
-                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
                 </form>
                 </div>
               </div>
@@ -209,8 +271,5 @@
   </div>
 </div>
 <script src="../js/custom/custom.js"></script>
-<script >
-  
-</script>
 <!--end-main-container-part-->
 <?php include '../layout/footer.php'; ?>

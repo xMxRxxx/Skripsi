@@ -11,4 +11,15 @@ var  nav = document.getElementById('nav');
             nav.style.background = "transparent";
             nav.style.boxShadow = "none";
         }
-      }
+    }
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("myDiv").style.display = "none";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
